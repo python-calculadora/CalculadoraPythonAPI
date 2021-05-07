@@ -6,7 +6,8 @@ def suma (num1, num2):
 
 #metodo resta
 def resta (num1, num2):
-    return (4)
+    resta = num1 - num2
+    return (resta)
 
 
 #metodo multiplicacion
