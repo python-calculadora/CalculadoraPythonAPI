@@ -1,7 +1,7 @@
 import unittest
 from parameterized import parameterized
 
-from calculadora import suma, resta
+from calculadora import suma, resta, multiplicacion
 
 class testCalculadora(unittest.TestCase):
     #Fase Arrange (Organizar/inicializar)
@@ -24,9 +24,21 @@ class testCalculadora(unittest.TestCase):
     def testResta (self, num1, num2, resultadoPlanificado):
          #Fase Act
          resultadoObtenido = resta (num1, num2)
+         #Fase Assert
          self.assertEqual(resultadoObtenido, resultadoPlanificado)
         
-        
+
+    #Fase Arrange
+    @parameterized.expand([[2, 1, 2], [-2, 7, -14], [-3, -5, 15]]) #datos para el test multiplicacion
+    
+    #metodo para test multiplicacion
+    def testMultiplicacion (self, num1, num2, resultadoPlanificado):
+        #Fase Act
+        resultadoObtenido = multiplicacion (num1, num2)
+        #Fase Assert
+        self.assertEqual(resultadoObtenido, resultadoPlanificado)
+    
+    
     
 if __name__ == "__main__":
     unittest.main()
