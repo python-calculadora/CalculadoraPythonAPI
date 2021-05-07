@@ -12,7 +12,8 @@ def resta (num1, num2):
 
 #metodo multiplicacion
 def multiplicacion (num1, num2):
-    return (-14)
+    multiplicacion = num1 * num2
+    return (multiplicacion)
 
 
 #metodo division
