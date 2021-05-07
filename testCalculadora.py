@@ -4,9 +4,9 @@ from parameterized import parameterized
 from calculadora import suma, resta, multiplicacion, division, raiz
 
 class testCalculadora(unittest.TestCase):
+    '''
     #Fase Arrange (Organizar/inicializar)
     @parameterized.expand([[1, 2, 3], [-5, 1, -4], [-1, -3, -4]]) #datos que se van a usar en el test de suma para comprobar (resultados planificados)
-
 
     #metodo para test de la suma
     def testSuma (self, num1, num2, resultadoPlanificado):
@@ -15,7 +15,7 @@ class testCalculadora(unittest.TestCase):
           
           #Fase Assert (confirmar/comprobar)
           self.assertEqual(resultadoObtenido, resultadoPlanificado) #comprueba que metodo se comporta como estaba previsto (devuelve el resultado que se esperaba)
-          
+       
           
     #Fase Arrange
     @parameterized.expand([[2, 1, 1], [-1, 1, -2], [1, -1, 2]]) #datos que se van a usar en el test de resta
@@ -48,10 +48,10 @@ class testCalculadora(unittest.TestCase):
         resultadoObtenido = division (num1, num2)
         #Fase Assert
         self.assertEqual(resultadoObtenido, resultadoPlanificado)
-    
+    '''
     
     #Fase Arrange
-    @parameterized.expand([[9, 3], [21, 4.58], [40, 6.32]]) #datos para el test de la raiz cuadrada
+    @parameterized.expand([[9, 3], [21, 4.58257569495584], [40, 6.324555320336758]]) #datos para el test de la raiz cuadrada
     
     #metodo para test raiz cuadrada
     def testRaiz (self, num, resultadoPlanificado):
