@@ -24,5 +24,11 @@ def division (num1, num2):
 
 #metodo raiz
 def raiz (num):
-    return (0)
+    
+    x = 1.0
+    
+    for k in range (1, 10):
+        x = (x + num/x)/2
+    
+    return (x)
 
