@@ -18,7 +18,8 @@ def multiplicacion (num1, num2):
 
 #metodo division
 def division (num1, num2):
-    return (1)
+    division = num1 / num2
+    return (division)
 
 
 #metodo raiz
