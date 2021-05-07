@@ -13,3 +13,8 @@ def multiplicacion (num1, num2):
     return (-14)
 
 
+#metodo division
+def division (num1, num2):
+    return (1)
+
+

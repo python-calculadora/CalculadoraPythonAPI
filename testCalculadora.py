@@ -1,7 +1,7 @@
 import unittest
 from parameterized import parameterized
 
-from calculadora import suma, resta, multiplicacion
+from calculadora import suma, resta, multiplicacion, division
 
 class testCalculadora(unittest.TestCase):
     #Fase Arrange (Organizar/inicializar)
@@ -35,6 +35,17 @@ class testCalculadora(unittest.TestCase):
     def testMultiplicacion (self, num1, num2, resultadoPlanificado):
         #Fase Act
         resultadoObtenido = multiplicacion (num1, num2)
+        #Fase Assert
+        self.assertEqual(resultadoObtenido, resultadoPlanificado)
+    
+    
+    #Fase Arrange
+    @parameterized.expand([[1, 1, 1], [4, -2, -2], [9, -3, -3]]) #datos para el test de division
+    
+    #metodo para test de division
+    def testDivision (self, num1, num2, resultadoPlanificado):
+        #Fase Act
+        resultadoObtenido = division (num1, num2)
         #Fase Assert
         self.assertEqual(resultadoObtenido, resultadoPlanificado)
     
