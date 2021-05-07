@@ -1,6 +1,7 @@
 #metodo suma
 def suma (num1, num2):
-    return (5)
+    suma = num1 + num2
+    return (suma)
 
 
 #metodo resta
