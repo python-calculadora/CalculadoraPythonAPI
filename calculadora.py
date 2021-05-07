@@ -18,3 +18,7 @@ def division (num1, num2):
     return (1)
 
 
+#metodo raiz
+def raiz (num):
+    return (0)
+

@@ -1,7 +1,7 @@
 import unittest
 from parameterized import parameterized
 
-from calculadora import suma, resta, multiplicacion, division
+from calculadora import suma, resta, multiplicacion, division, raiz
 
 class testCalculadora(unittest.TestCase):
     #Fase Arrange (Organizar/inicializar)
@@ -50,9 +50,20 @@ class testCalculadora(unittest.TestCase):
         self.assertEqual(resultadoObtenido, resultadoPlanificado)
     
     
+    #Fase Arrange
+    @parameterized.expand([[9, 3], [21, 4.58], [40, 6.32]]) #datos para el test de la raiz cuadrada
+    
+    #metodo para test raiz cuadrada
+    def testRaiz (self, num, resultadoPlanificado):
+        #Fase Act
+        resultadoObtenido = raiz (num)
+        #Fase Assert
+        self.assertEqual(resultadoObtenido, resultadoPlanificado)
+    
     
 if __name__ == "__main__":
     unittest.main()
+        
         
         
         
